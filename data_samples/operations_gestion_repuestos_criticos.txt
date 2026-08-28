@@ -1,0 +1,11 @@
+EcoPower Solutions - Gestión de Repuestos Críticos para Aerogeneradores
+Código: OP-004 | Área: Operaciones
+
+1. Control de Inventario
+El departamento de logística mantendrá un stock mínimo garantizado de repuestos críticos en los almacenes regionales para minimizar los tiempos de parada no planificada.
+
+2. Componentes de Almacenamiento Obligatorio
+Se mantendrá un stock mínimo de: 2 multiplicadoras completas, 4 palas de sustitución, 10 tarjetas de control principal y 5 rodamientos de buje.
+
+3. Tiempos de Entrega
+El tiempo máximo de transporte desde el almacén regional hasta cualquier parque eólico de la península no superará las 6 horas desde la declaración de avería crítica.

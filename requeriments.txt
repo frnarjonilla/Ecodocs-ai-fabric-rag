@@ -1,0 +1,25 @@
+# PySpark y motor de datos
+pyspark>=3.4.0,<3.5.0
+delta-spark>=2.4.0
+
+# Extracción de texto y procesamiento de documentos
+pdfplumber>=0.10.0
+pypdf>=4.0.0
+python-docx>=1.1.0
+openpyxl>=3.1.0
+pandas>=2.0.0
+
+# Procesamiento de lenguaje natural y Embeddings
+sentence-transformers>=2.2.2,<3.0.0
+transformers>=4.30.0,<4.41.0
+torch>=2.0.0
+numpy>=1.24.0
+
+# Integración con LLM (Groq / OpenAI Client)
+openai>=1.10.0
+
+# Calidad de datos y detección de idioma
+langdetect>=1.0.9
+
+# Utilidades de entorno
+python-dotenv>=1.0.0

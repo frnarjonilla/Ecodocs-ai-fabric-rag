@@ -1,0 +1,11 @@
+EcoPower Solutions - Protocolo de Seguridad para Trabajos en Altura
+Código: SE-002 | Área: Seguridad y Prevención
+
+1. Equipos Obligatorios
+Para cualquier trabajo realizado a más de 2 metros de altura o en la nacela del aerogenerador, es obligatorio el uso de arnés anticaídas de 5 puntos con absorbedor de energía y casco con barbiquejo.
+
+2. Verificación Previa
+El técnico deberá inspeccionar visualmente los puntos de anclaje, líneas de vida y retráctiles antes de iniciar cualquier ascenso a la torre.
+
+3. Condiciones Meteorológicas Limítrofes
+Queda prohibido el ascenso a la torre con velocidades de viento superior a 18 m/s o ante la presencia de tormenta eléctrica en un radio inferior a 10 km.

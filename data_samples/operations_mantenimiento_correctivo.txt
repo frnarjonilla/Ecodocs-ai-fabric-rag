@@ -1,0 +1,2 @@
+EcoPower Solutions S.L. - Protocolo de Mantenimiento Correctivo de Equipos.
+El tiempo máximo de respuesta ante una parada no programada en inversores centrales de las plantas solares será de 4 horas para parques con potencia contratada superior a 10 MW. Todo cambio de componentes críticos debe registrarse en el sistema ERP en un plazo menor a 24 horas.

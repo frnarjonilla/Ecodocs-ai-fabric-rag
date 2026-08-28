@@ -1,0 +1,11 @@
+EcoPower Solutions - Especificaciones Técnicas de Inversores Fotovoltaicos
+Código: TE-002 | Área: Técnica
+
+1. Compatibilidad de Tensiones
+Los inversores de string de las plantas solares deben operar en un rango de tensión MPPT de 500V a 1500V CC, con un rendimiento máximo de conversión del 98.8%.
+
+2. Grado de Protección Ambiental
+Todos los equipos instalados en intemperie deberán contar con un grado de protección mínimo IP66 y resistencia a la corrosión C5 para ambientes industriales.
+
+3. Monitorización
+Cada inversor transmitirá telemetría en tiempo real mediante protocolo Modbus TCP a la plataforma central SCADA de EcoPower Solutions.

@@ -1,0 +1,36 @@
+# ==========================================
+# 1. API Keys, Secretos y Variables de Entorno
+# ==========================================
+.env
+.env.*
+*.env
+*.pem
+*.key
+secrets.json
+config.json
+
+# ==========================================
+# 2. Archivos Temporales de Python y Notebooks
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# ==========================================
+# 3. Entornos Virtuales
+# ==========================================
+env/
+venv/
+ENV/
+.venv/
+
+# ==========================================
+# 4. Datos de Prueba / Basura Local
+# ==========================================
+*.log
+*.sqlite
+*.db
+.DS_Store
+Thumbs.db

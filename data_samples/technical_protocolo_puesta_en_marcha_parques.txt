@@ -1,0 +1,11 @@
+EcoPower Solutions - Protocolo de Puesta en Marcha de Parques Eólicos
+Código: TE-003 | Área: Técnica
+
+1. Pruebas de Energización
+Antes de la conexión a la red de distribución, se realizará la verificación de secuencia de fases, calibración de protecciones y pruebas de disparo en vacío.
+
+2. Período de Marcha en Prueba
+El parque eólico deberá completar un período continuo de 120 horas de funcionamiento sin fallos críticos antes de recibir el acta de puesta en servicio comercial.
+
+3. Documentación Requerida
+Es obligatorio adjuntar los certificados de calibración de los analizadores de red y el informe definitivo de ensayos de huecos de tensión.

@@ -1,0 +1,11 @@
+EcoPower Solutions - Manual de Mantenimiento de Subestaciones Eléctricas
+Código: OP-003 | Área: Operaciones
+
+1. Objeto y Alcance
+Este procedimiento establece las pautas para el mantenimiento preventivo de los transformadores de alta tensión y celdas de media tensión en las subestaciones de los parques eólicos.
+
+2. Frecuencia de Inspección
+Las revisiones termográficas y de aislamiento se ejecutarán con periodicidad trimestral. Los análisis dieléctricos del aceite aislante se realizarán anualmente.
+
+3. Protocolo de Seguridad
+Queda estrictamente prohibido el acceso a la zona de transformadores sin el permiso de trabajo en tensión (PTT) firmado por el responsable de la subestación y la comprobación de puesta a tierra.
