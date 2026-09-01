@@ -1,0 +1,12 @@
+dependencies:
+  - python=3.10
+  - pip:
+      - openai
+      - python-docx
+      - pypdf
+      - pdfplumber
+      - sentence-transformers==2.7.0
+      - transformers==4.39.3
+      - tokenizers==0.15.2
+      - httpx
+      - aiohttp

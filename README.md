@@ -13,10 +13,7 @@ Las compañías del sector energético gestionan miles de documentos normativos,
 ## 3. Arquitectura
 El sistema implementa una arquitectura desacoplada en Microsoft Fabric que conecta la ingesta de documentos no estructurados con un motor semántico auditable:
 
-[Fuentes PDF/TXT] ──> [Bronze Lakehouse] ──> [Quality Framework] ──> [Silver Lakehouse]
-│
-[Power BI Dashboard] <── [Gold Lakehouse] <── [Groq LLM + MiniLM] <──────────┘
-
+[Fuentes PDF/TXT] ──> [Bronze Lakehouse] ──> [Quality Framework] ──> [Silver Lakehouse] ──> [Groq LLM + MiniLM] ──> [Gold Lakehouse] ──> [Power BI Dashboard]
 
 ## 4. Tecnologías Utilizadas
 * **Plataforma Core**: Microsoft Fabric (OneLake, Lakehouse, Notebooks PySpark, Pipelines).
@@ -46,6 +43,9 @@ El dataset operativo está compuesto por **20 documentos técnicos**:
 
 ## 8. Capturas de Fabric
 
+<details>
+<summary><b>🔍 Haz clic aquí para desplegar capturas de Microsoft Fabric</b></summary>
+
 ![Workspace de Fabric](docs/screenshots/workspace.png)
 *Figura 0: Elementos del Workspace EcodocsAi.*
 
@@ -58,20 +58,63 @@ El dataset operativo está compuesto por **20 documentos técnicos**:
 ![Modelo Semántico](docs/screenshots/mod_sem.png)
 *Figura 3: Configuración del modelo smántico.*
 
-## 9. Capturas de Power BI
-*(Agrega las capturas de tus 4 páginas de Power BI)*
+</details>
 
-![Resumen Ejecutivo](powerbi/screenshots/page1_executive.png)
+## 9. Capturas de Power BI
+
+![Resumen Ejecutivo](powerbi/screenshots/Resumen_Ejecutivo.png)
 *Figura 4: Página 1 - Resumen Ejecutivo.*
 
-![Calidad Documental](powerbi/screenshots/page2_quality.png)
+![Calidad Documental](powerbi/screenshots/Calidad_Documental.png)
 *Figura 5: Página 2 - Calidad Documental.*
 
-![Uso del Asistente](powerbi/screenshots/page3_usage.png)
+![Uso del Asistente](powerbi/screenshots/Uso_del_Asistente.png)
 *Figura 6: Página 3 - Métricas de Uso del Asistente RAG.*
 
-![Operación del Pipeline](powerbi/screenshots/page4_operation.png)
+![Operación del Pipeline](powerbi/screenshots/Operación_del_Pipeline.png)
 *Figura 7: Página 4 - Monitorización Operativa.*
+
+<details>
+<summary><b>🔍 Haz clic aquí para desplegar la especificación detallada de Métricas y DAX</b></summary>
+
+## 📈 Especificación de KPIs y Medidas DAX
+
+El modelo semántico de Power BI implementa una capa de métricas analíticas calculadas en DAX sobre la arquitectura Medallion (Silver/Gold):
+
+### Capa de Calidad e Ingesta (Silver Layer)
+* **Total Documentos (`Total_Documentos`):**
+  `COUNTROWS('silver_documents')`
+  *Mide el volumen total de archivos procesados y parseados en la capa Silver.*
+* **Calidad Media (`Calidad_Media`):**
+  `AVERAGE('silver_documents'[quality_score])`
+  *Puntuación promedio de salud de la ingesta documental (escala 0-100%).*
+* **Documentos Válidos (`Docs_Validos`):**
+  `CALCULATE(COUNTROWS('silver_documents'), 'silver_documents'[quality_status] = "valid") + 0`
+  *Conteo absoluto de archivos que superaron el 100% de las validaciones de schema y parsing.*
+* **Documentos con Advertencia / Errores (`Docs_Warning` / `Docs_Invalidos`):**
+  `CALCULATE(COUNTROWS('silver_documents'), 'silver_documents'[quality_status] = "warning") + 0`
+  *Conteo de excepciones en la ingesta para auditoría de Data Quality.*
+
+### Capa Vectorial y RAG Analytics (Gold Layer)
+* **Total Chunks Vectoriales (`Total_Chunks`):**
+  `COUNTROWS('gold_document_chunks')`
+  *Volumen total de fragmentos de texto vectorizados y almacenados en la base de datos de conocimiento.*
+* **Densidad de Fragmentación (`Promedio_Chunks_Doc`):**
+  `DIVIDE([Total_Chunks], [Total_Documentos], 0)`
+  *Métrica de granularidad que indica el promedio de fragmentos vectoriales generados por cada documento.*
+* **Consultas de Usuarios (`Total_Preguntas`):**
+  `COUNTROWS('gold_questions')`
+  *Total de interacciones y preguntas enviadas al motor RAG.*
+* **Respuestas del Motor RAG (`Total_Respuestas`):**
+  `COUNTROWS('gold_answers')`
+  *Total de síntesis y respuestas contextuales inferidas por el LLM (Groq).*
+
+### Operación y Monitoreo del Pipeline
+* **Ejecuciones de Ingesta (`Total_Ejecuciones`):**
+  `DISTINCTCOUNT('silver_documents'[document_id])`
+  *Número de cargas por lotes (batches) ejecutadas por los orquestadores de Microsoft Fabric.*
+
+</details>
 
 ## 10. Ejemplos de Preguntas y Respuestas
 
